@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Character</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/characters.css">
+    <link rel="stylesheet" href="styles/create-character.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="body-bg">
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">JuegoCampus</a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="create-character.html" class="active">Create Character</a></li>
+                <li><a href="#" id="favorites-link">Favorites <span id="favorites-count">(0)</span></a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main class="main-container">
+        <section class="create-character-section">
+            <h2>Create Your Character</h2>
+            <form id="create-character-form" class="create-character-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="character-name">Character Name:</label>
+                        <input type="text" id="character-name" required placeholder="Enter character name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="character-race">Race:</label>
+                        <select id="character-race" required>
+                            <option value="">Select a race</option>
+                            <!-- Options loaded from API -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="character-class">Class:</label>
+                        <select id="character-class" required>
+                            <option value="">Select a class</option>
+                            <!-- Options loaded from API -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="character-gender">Gender:</label>
+                        <select id="character-gender" required>
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="character-description">Description:</label>
+                        <textarea id="character-description" rows="3" placeholder="Describe your character"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="character-image">Character Image URL:</label>
+                        <input type="text" id="character-image" placeholder="Enter image URL">
+                        <p class="form-help">Leave empty for a random image</p>
+                    </div>
+                </div>
+                
+                <div class="stats-section">
+                    <h3>Character Stats</h3>
+                    <div class="stats-grid">
+                        <div class="stat-form-group">
+                            <label for="stat-strength">Strength:</label>
+                            <input type="number" id="stat-strength" min="1" max="20" value="10">
+                        </div>
+                        <div class="stat-form-group">
+                            <label for="stat-dexterity">Dexterity:</label>
+                            <input type="number" id="stat-dexterity" min="1" max="20" value="10">
+                        </div>
+                        <div class="stat-form-group">
+                            <label for="stat-constitution">Constitution:</label>
+                            <input type="number" id="stat-constitution" min="1" max="20" value="10">
+                        </div>
+                        <div class="stat-form-group">
+                            <label for="stat-intelligence">Intelligence:</label>
+                            <input type="number" id="stat-intelligence" min="1" max="20" value="10">
+                        </div>
+                        <div class="stat-form-group">
+                            <label for="stat-wisdom">Wisdom:</label>
+                            <input type="number" id="stat-wisdom" min="1" max="20" value="10">
+                        </div>
+                        <div class="stat-form-group">
+                            <label for="stat-charisma">Charisma:</label>
+                            <input type="number" id="stat-charisma" min="1" max="20" value="10">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-section">
+                    <h3>Equipment</h3>
+                    <div class="equipment-selection">
+                        <select id="equipment-select" multiple size="5">
+                            <!-- Options loaded from API -->
+                        </select>
+                        <div class="equipment-buttons">
+                            <button type="button" id="add-equipment">Add →</button>
+                            <button type="button" id="remove-equipment">← Remove</button>
+                        </div>
+                        <select id="character-equipment" multiple size="5">
+                            <!-- Selected equipment -->
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="traits-section">
+                    <h3>Character Traits</h3>
+                    <div class="traits-input">
+                        <input type="text" id="trait-input" placeholder="Enter a trait">
+                        <button type="button" id="add-trait">Add Trait</button>
+                    </div>
+                    <ul id="traits-list" class="traits-list">
+                        <!-- Traits will be added here -->
+                    </ul>
+                </div>
+                
+                <div class="abilities-section">
+                    <h3>Special Abilities</h3>
+                    <div class="abilities-input">
+                        <input type="text" id="ability-input" placeholder="Enter an ability">
+                        <button type="button" id="add-ability">Add Ability</button>
+                    </div>
+                    <ul id="abilities-list" class="abilities-list">
+                        <!-- Abilities will be added here -->
+                    </ul>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="create-button">Create Character</button>
+                    <button type="reset" class="reset-button">Reset Form</button>
+                </div>
+            </form>
+        </section>
+        
+        <section class="character-preview-section">
+            <h2>Character Preview</h2>
+            <div id="character-preview" class="character-preview">
+                <div class="preview-placeholder">
+                    <p>Fill out the form to see a preview of your character</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="src/app.js" type="module"></script>
+    <script src="src/create-character.js" type="module"></script>
+</body>
+</html>
