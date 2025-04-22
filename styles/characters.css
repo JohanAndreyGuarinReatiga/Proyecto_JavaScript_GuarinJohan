@@ -27,3 +27,32 @@ z-index: 0;
     max-width: 1400px;
     margin: 0 auto;
   }
+
+.filters-section {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+  
+.filters-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #b49b6b;
+}
+.filter-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: bold;
+  color: var(--text-color);
+}
