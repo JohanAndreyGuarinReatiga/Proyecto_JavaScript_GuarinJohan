@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/characters.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="body-bg">
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">JuegoCampus</a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Go back</a></li>
+                <li><a href="characters.html" class="active">Characters</a></li>
+                <li><a href="#" id="favorites-link">Favorites <span id="favorites-count">(0)</span></a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <main class="main-container">
+        <section class="filters-section">
+            <h2>Filters</h2>
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="name-search">Name:</label>
+                    <input type="text" id="name-search" placeholder="Search By name...">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="race-select">Race:</label>
+                    <select id="race-select">
+                        <option value="">All races</option>
+                        
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="class-select">class:</label>
+                    <select id="class-select">
+                        <option value="">All classes</option>
+                        <!-- api loaedd options -->
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="gender-select">Gender:</label>
+                    <select id="gender-select">
+                        <option value="">All Genders</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="equipment-select">Equipment</label>
+                    <select id="equipment-select">
+                        <option value="">Equipment</option>
+                        <!-- json values loadede-->
+                    </select>
+                </div>
+                
+                <button id="apply-filters" class="filter-button">Apply filters</button>
+                <button id="reset-filters" class="filter-button reset">Restart</button>
+            </div>
+        </section>
+
+        <section class="characters-section">
+            <div class="view-toggle">
+                <button id="toggle-favorites" class="toggle-button">See Favorites</button>
+                <span id="results-count">0 characters found</span>
+            </div>
+            
+            <div id="characters-container" class="characters-container">
+                <!-- here loads for each character-->
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+.body-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/167656.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+  }
+  
+body.body-bg {
+position: relative;
+z-index: 0;
+}
+
+  
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
