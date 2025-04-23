@@ -5,58 +5,60 @@
     gap: 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
-  }
+}
+
+.create-character-section {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.create-character-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: var(--text-color);
+  font-family: "MedievalSharp";
+}
   
-  .create-character-section {
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-  }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  background-color: rgba(199, 191, 198, 0.493);
+}
   
-  .create-character-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(123, 44, 191, 0.2);
   
-  .form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .form-group label {
-    font-weight: bold;
-    color: var(--text-color);
-  }
-  
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.6rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 1rem;
-    background-color: white;
-  }
-  
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(123, 44, 191, 0.2);
-  }
-  
-  .form-help {
-    font-size: 0.8rem;
-    color: var(--text-light);
-    margin-top: 0.2rem;
-  }
+}
+
+.form-help {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+}
