@@ -271,7 +271,7 @@ body.body-bg {
 }
 
 .stat-item {
-  background-color: var(--background-color);
+  background-color: #e6b0e6;
   padding: 0.8rem;
   border-radius: 6px;
   text-align: center;
@@ -362,6 +362,23 @@ body.body-bg {
 .favorite-button.active:hover {
   background-color: #b00020;
 }
+
+.delete-button{
+  padding: 0.8rem 1.5rem;
+  background-color: var(--error-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: var(--transition);
+  align-self: center;
+}
+
+.delete-button:hover {
+  background-color: #b00020;
+}
+
 
 @keyframes imagePlaceholderPulse {
   0% {

@@ -59,6 +59,7 @@ a:hover {
 button {
   cursor: pointer;
   transition: var(--transition);
+  
 }
 ul {
   list-style: none;
@@ -145,6 +146,8 @@ img {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
+  scrollbar-width: none;
+  font-family: "MedievalSharp";
 }
 
 .modal-content {
@@ -157,6 +160,7 @@ img {
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+  scrollbar-width: none;
 }
 
 .close-modal {

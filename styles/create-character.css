@@ -40,14 +40,70 @@
   
 .form-group input,
 .form-group select,
-.form-group textarea {
+.form-group textarea,
+.stat-form-group input,
+.equipment-section select{
+  padding: 0.6rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  background-color: rgba(199, 191, 198, 0.493);
+  scrollbar-width: none;
+}
+.equipment-section button{
+  padding: 0.5rem 1rem;
+  background-color: #3333;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  margin: 0.8rem;
+  transition: var(--transition);
+  align-self: center;
+}
+.equipment-section button:hover,
+.abilities-input button:hover,
+.traits-input button:hover,
+.create-button:hover,
+.reset-button:hover{
+  background-color: rgb(74, 56, 95);
+}
+  
+.traits-input input,
+.abilities-input input{
   padding: 0.6rem;
   border: none;
   border-radius: 25px;
   font-size: 1rem;
   background-color: rgba(199, 191, 198, 0.493);
 }
-  
+.traits-input button,
+.abilities-input button,
+.create-button,
+.reset-button{
+  padding: 0.5rem 1rem;
+  background-color: #3333;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  margin: 0.8rem;
+  transition: var(--transition);
+  align-self: center;
+}
+.remove-trait,
+.remove-ability{
+  background-color: transparent;
+  border-style: none;
+  border-radius: 20px;
+}
+
+.remove-trait:hover,
+.remove-ability:hover{
+  background-color: red;
+}
+
+
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -61,4 +117,11 @@
   font-size: 0.8rem;
   color: var(--text-light);
   margin-top: 0.2rem;
+}
+
+.character-preview-section{
+  background-color: rgba(152, 135, 173, 0.904);
+  border-radius: 5px;
+  font-family: "MedievalSharp";
+  font-size: 1.2rem;
 }
