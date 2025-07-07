@@ -1,4 +1,4 @@
-# JuegpoCampus -  Character Generator
+# JuegoCampus -  Character Generator
 
 JuegoCampus is an advanced web platform for creating and filtering fantasy characters, inspired by the world of **Dungeons & Dragons (D&D 5e)**. This interactive application allows users to personalize and visualize their heroes by choosing races, classes, weapons, armor, abilities, and more.
 
